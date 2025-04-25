@@ -28,7 +28,7 @@ export default function BreedsPage() {
       // Size filter
       if (
         filters.size !== 'all' &&
-        !breed.size.toLowerCase().includes(filters.size.toLowerCase())
+        !breed.size.toLowerCase().includes(filters.size!.toLowerCase())
       ) {
         return false;
       }
@@ -36,7 +36,7 @@ export default function BreedsPage() {
       // Energy level filter
       if (
         filters.energyLevel !== 'all' &&
-        !breed.energyLevel.toLowerCase().includes(filters.energyLevel.toLowerCase())
+        !breed.energyLevel.toLowerCase().includes(filters.energyLevel!.toLowerCase())
       ) {
         return false;
       }
@@ -44,7 +44,7 @@ export default function BreedsPage() {
       // Friendliness filter
       if (
         filters.friendliness !== 'all' &&
-        !breed.friendliness.toLowerCase().includes(filters.friendliness.toLowerCase())
+        !breed.friendliness.toLowerCase().includes(filters.friendliness!.toLowerCase())
       ) {
         return false;
       }

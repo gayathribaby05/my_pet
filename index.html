@@ -98,33 +98,33 @@
   <img class="image" src="https://media.licdn.com/dms/image/v2/D560BAQF45cp_RFZpnQ/company-logo_100_100/company-logo_100_100/0/1715885396777/iamx_retail_logo?e=1750896000&v=beta&t=MnLBchxb3zD52O7H0wDKTjX_PbDKBiMJvZkA5oTOL5M" alt="AI-powered marketing visualization with digital interfaces">
   
   <div class="content">
-    Okay, I understand. I will act as an AI assistant that automates code updates for a GitHub repository. My primary tasks are:
+    Okay, I understand. I'm ready to process input, generate/modify code, and provide the output in a format suitable for an n8n workflow to commit changes to a GitHub repository.
 
-1.  **Analyze Input Data:**  I'll carefully examine the input data provided, which may include specifications, requirements, or existing code snippets.
-2.  **Generate/Modify Code:**  Based on the input, I'll either generate new code files or modify existing ones to meet the specified requirements.
-3.  **Format and Clean Code:** Ensure the generated or modified code is clean, well-formatted, and follows best practices.
-4.  **Prepare Output for Automation:** Structure the output data in a format that is easily digestible by an automation workflow tool like n8n. This includes providing the file content and a well-crafted commit message.
-5.  **Commit Message Generation:** Create a clear and concise commit message describing the changes made to the codebase.
+My output will always consist of the following keys:
 
-**Output Structure:**
+*   `content`: The complete, updated content of the modified file, ready to be written to the file.  This will be a string.
+*   `commitMessage`: A short, descriptive commit message explaining the changes made. This will also be a string.
+*   `filePath`:  The path to the file that was updated within the repository (e.g., `src/components/MyComponent.js`).  This will also be a string.
 
-I will provide the output in a JSON format suitable for processing by an automation workflow.  The JSON structure will include the following fields:
+I will do my best to ensure:
 
-*   `filePath`: (string) The path to the file being created or modified within the repository.
-*   `fileContent`: (string) The complete content of the file, ready to be written to the repository.
-*   `commitMessage`: (string) A short, descriptive commit message explaining the changes.
+*   The code is correctly formatted and follows any specified style guidelines.
+*   The commit message is clear, concise, and accurately reflects the changes.
+*   The `filePath` is correct.
+*   The `content` is valid and complete (e.g. complete file, not just a code snippet).
 
-**Example Output:**
+I'm ready for your input! Please provide me with:
 
-```json
-{
-  "filePath": "src/components/MyComponent.js",
-  "fileContent": "import React from 'react';\n\nfunction MyComponent() {\n  return (\n    <div>\n      <h1>Hello, World!</h1>\n    </div>\n  );\n}\n\nexport default MyComponent;",
-  "commitMessage": "feat: Add MyComponent with basic greeting"
-}
-```
+1.  **The task or request:** What code needs to be generated or modified?  Be as specific as possible.
+2.  **Existing file content (if modifying):** The current content of the file to be modified. If creating a new file, you can skip this.
+3.  **File path:** The location of the file within the repository (e.g., `src/components/MyComponent.js`).
+4.  **Any specific instructions or context:** Any additional information that might be helpful, such as:
+    *   The programming language.
+    *   Framework or library being used.
+    *   Desired coding style.
+    *   Dependencies that need to be considered.
 
-I'm ready to take in input data and begin generating/modifying code. Please provide the input data you want me to work with. I'll do my best to provide accurate, well-formatted output that can be easily integrated into your automation workflow.
+Let's get to work!
 
   </div>
 

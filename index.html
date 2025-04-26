@@ -98,37 +98,43 @@
   <img class="image" src="https://media.licdn.com/dms/image/v2/D560BAQF45cp_RFZpnQ/company-logo_100_100/company-logo_100_100/0/1715885396777/iamx_retail_logo?e=1750896000&v=beta&t=MnLBchxb3zD52O7H0wDKTjX_PbDKBiMJvZkA5oTOL5M" alt="AI-powered marketing visualization with digital interfaces">
   
   <div class="content">
-    Okay, I understand. I'm ready to act as an AI assistant for automated code updates in a GitHub repository.
+    Okay, I understand. I'm ready to assist with automating code updates in a GitHub repository. I will focus on:
 
-Here's how I will operate:
+1.  **Analyzing Input Data:** Understanding the input data, whether it's instructions to generate a new file, modify an existing one, or a data structure to be incorporated into the code.
+2.  **Code Generation/Modification:**  Generating new code files or modifying existing ones according to the input data and best practices.
+3.  **Content Formatting:** Ensuring the code is well-formatted, readable, and adheres to established coding standards.
+4.  **Commit Message Creation:** Generating a concise and descriptive commit message explaining the changes made.
+5.  **Structured Output:** Providing a structured output that includes:
+    *   `file_path`: The path to the file being created or updated within the repository.
+    *   `file_content`: The complete content of the file after the changes.
+    *   `commit_message`: A clear and concise commit message.
 
-1.  **Receive Input Data:** I will accept structured input data that describes the desired code changes. This input might include specifications for new features, bug fixes, updates to existing functionality, or modifications to data structures.
+This structure is designed to be easily integrated into an n8n workflow for automated GitHub updates.
 
-2.  **Analyze Input Data:**  I will carefully analyze the input data to understand the requirements and identify the specific code files that need to be created or modified.
+**Example:**
 
-3.  **Code Generation/Modification:** Based on the analysis, I will either generate new code files from scratch or modify existing files to meet the specified requirements. I will use appropriate programming languages and best practices to ensure the code is clean, efficient, well-documented, and maintainable.
-
-4.  **Format Content:** I will format the content in a clear, readable manner, suitable for inclusion in a commit.
-
-5.  **Generate Commit Message:** I will generate a concise and informative commit message that accurately describes the changes made.  I will aim for a message that is easy to understand and provides context for future developers.
-
-6.  **Prepare Structured Output:** Finally, I will package the updated file content and the commit message into a structured output format that can be easily ingested by an automation workflow (like n8n) to update the GitHub repository. This output will typically include:
-
-    *   **`file_path`:**  The path to the file being created or modified within the repository.
-    *   **`file_content`:** The complete content of the updated file.
-    *   **`commit_message`:** A clear and concise commit message describing the changes.
-
-**Example Output Format (JSON):**
+Let's say the input data is:
 
 ```json
 {
   "file_path": "src/components/MyComponent.js",
-  "file_content": "// Updated content of MyComponent.js\nimport React from 'react';\n\nfunction MyComponent() {\n  return (<div>Hello, world!</div>);\n}\n\nexport default MyComponent;",
-  "commit_message": "feat: Implement new greeting message in MyComponent"
+  "component_name": "MyNewComponent",
+  "description": "A simple React component.",
+  "add_prop": "title: string"
 }
 ```
 
-I'm ready to receive your input data and start processing code updates. Please provide the specifications and any relevant context for the changes you need. I will do my best to generate high-quality code updates and prepare them for seamless integration into your GitHub repository.
+My output would look like this:
+
+```json
+{
+  "file_path": "src/components/MyComponent.js",
+  "file_content": "// src/components/MyComponent.js\n\nimport React from 'react';\n\n/**\n * A simple React component.\n */\nconst MyNewComponent = ({ title }) => {\n  return (\n    <div>\n      <h1>{title}</h1>\n    </div>\n  );\n};\n\nexport default MyNewComponent;",
+  "commit_message": "feat: Add MyNewComponent with title prop"
+}
+```
+
+I'm ready to receive instructions and data.  Let me know what you need me to do!
 
   </div>
 

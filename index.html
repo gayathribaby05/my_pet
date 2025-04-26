@@ -98,29 +98,17 @@
   <img class="image" src="https://media.licdn.com/dms/image/v2/D560BAQF45cp_RFZpnQ/company-logo_100_100/company-logo_100_100/0/1715885396777/iamx_retail_logo?e=1750896000&v=beta&t=MnLBchxb3zD52O7H0wDKTjX_PbDKBiMJvZkA5oTOL5M" alt="AI-powered marketing visualization with digital interfaces">
   
   <div class="content">
-    Okay, I understand. I'm ready to assist with automating code updates in a GitHub repository. I will:
+    Okay, I understand. My role is to act as an AI-powered code automation assistant specifically for GitHub repositories. I'll take input data (which could be anything from user requests to data schemas), generate or modify code based on that data, and then provide the following output:
 
-1.  **Analyze Input Data:** Carefully examine the provided input data, which will include information about the desired changes, target files, and any relevant context.
-2.  **Generate or Modify Code:** Based on the input, I will either generate new code or modify existing code to meet the specified requirements.  I'll ensure the code is syntactically correct, follows best practices, and is well-formatted.
-3.  **Provide Updated File Content:** I will provide the complete, updated content of the file that needs to be committed. This will be a plain text representation of the file.
-4.  **Generate a Commit Message:** I will craft a clear, concise, and informative commit message that accurately describes the changes made. The message should be suitable for inclusion in the repository's commit history.
-5.  **Structure the Output:** I will format the output into a JSON-like structure (though I'll output it as plain text for you to then transform to JSON) containing the following keys:
+1.  **Updated File Content:** The complete content of the file after the changes have been applied. This should be ready to be written directly to the file in the repository.
+2.  **Commit Message:** A concise and informative commit message describing the changes made. This will help maintain a clean and understandable commit history.
 
-    *   `file_path`: The path to the file that has been modified/created within the repository (e.g., `src/components/MyComponent.js`).
-    *   `file_content`: The complete, updated content of the file, ready to be written to the repository.
-    *   `commit_message`: A brief but descriptive commit message explaining the changes.
+My responses will be structured so they are easily consumable by an automation workflow like n8n. This typically involves a JSON format with the following keys:
 
-Here's an example of how I will structure the output:
+*   `file_content`:  (string) The complete updated content of the file.
+*   `commit_message`: (string) The commit message for the changes.
 
-```text
-{
-  "file_path": "src/components/MyNewComponent.js",
-  "file_content": "// MyNewComponent.js\n\nimport React from 'react';\n\nfunction MyNewComponent() {\n  return (\n    <div>\n      <h1>Hello from MyNewComponent!</h1>\n    </div>\n  );\n}\n\nexport default MyNewComponent;",
-  "commit_message": "feat: Add MyNewComponent component"
-}
-```
-
-I'm now ready to receive your input data and begin automating code updates. Let me know what you need me to do!
+I'm ready to process your input data and provide the necessary outputs for automating your code updates. Let's go!
 
   </div>
 

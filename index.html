@@ -98,34 +98,33 @@
   <img class="image" src="https://media.licdn.com/dms/image/v2/D560BAQF45cp_RFZpnQ/company-logo_100_100/company-logo_100_100/0/1715885396777/iamx_retail_logo?e=1750896000&v=beta&t=MnLBchxb3zD52O7H0wDKTjX_PbDKBiMJvZkA5oTOL5M" alt="AI-powered marketing visualization with digital interfaces">
   
   <div class="content">
-    Okay, I understand. My role is to act as a code automation assistant specifically designed to work within a GitHub repository update workflow. I will:
+    Okay, I understand. I will act as an AI assistant that automates code updates in a GitHub repository. My primary tasks will be:
 
-1.  **Receive Input:** This includes the data driving the code generation or modification, the target file path within the repository, and any relevant instructions.
-2.  **Analyze Input:** I will parse the input data and understand the required changes.
-3.  **Generate/Modify Code:** Based on the input and instructions, I will either create a new code file or modify an existing one.  I will prioritize clean, well-formatted, and maintainable code.
-4.  **Prepare Output:** I will format the output as a JSON object containing:
-    *   `file_path`: The relative path to the file in the repository that was created/modified.
-    *   `content`: The complete, updated content of the file.
-    *   `commit_message`: A short, descriptive, and informative commit message summarizing the changes.  This should follow conventional commit message guidelines where appropriate.
+1.  **Analyze Input Data:** I will carefully examine any input data provided (e.g., a description of a new feature, changes to an existing function, or new data to be incorporated).
 
-Here's an example of the output format I will use:
+2.  **Generate/Modify Code:** Based on the input data, I will either generate new code files or modify existing ones. I will adhere to best practices for code readability, maintainability, and style.
+
+3.  **Prepare Content:** I will ensure that the generated/modified code is clean, well-formatted, and ready to be committed. This may include:
+
+    *   Adding necessary comments.
+    *   Ensuring proper indentation and code style.
+    *   Removing unnecessary whitespace.
+
+4.  **Provide Output for n8n:** I will structure the output as a JSON object that can be directly consumed by an n8n workflow for committing the changes to a GitHub repository. The output will include:
+
+    *   **`fileContent`:** The complete content of the updated file.
+    *   **`commitMessage`:** A clear and concise message describing the changes made to the file.
+
+Here's the structure of the JSON output I will provide:
 
 ```json
 {
-  "file_path": "path/to/your/file.ext",
-  "content": "```\n// Your updated code here\n```",
-  "commit_message": "feat: Add new feature X based on input data"
+  "fileContent": "```\n// The updated content of the file\n// including comments and proper formatting\n```",
+  "commitMessage": "A concise and descriptive commit message explaining the changes made."
 }
 ```
 
-**Important Considerations:**
-
-*   **Code Formatting:** I will strive to maintain consistent code formatting (e.g., indentation, spacing, line breaks) according to common practices for the language.  I will use backticks (`) to enclose code blocks for clarity.
-*   **Context is Key:**  The quality of my output depends heavily on the clarity and completeness of the input data and instructions.  Please provide as much relevant information as possible.
-*   **Error Handling:**  While I can't "run" the code, I will try to anticipate common errors and generate code that is less likely to cause issues. I will also make reasonable assumptions about the repository structure if it is needed.
-*   **n8n Compatibility:** The JSON output is specifically designed to be easily consumed by an n8n workflow for automated GitHub repository updates.
-
-I am ready to receive your input and start automating code updates!
+I will ensure the output is ready to be used within an automated workflow to update a GitHub repository, focusing on providing clear and helpful information for the automated process. I am ready to receive input and begin generating or modifying code.
 
   </div>
 

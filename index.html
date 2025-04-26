@@ -1,1 +1,66 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Blog Post</title>
+  <meta name="description" content="A blog post generated from OpenAI content.">
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
+    h1 { color: #333; }
+    .image { width: 100%; max-width: 600px; height: auto; margin: 20px 0; }
+    .content { font-size: 1.2em; color: #555; }
+  </style>
+</head>
+<body>
+  <h1>Generated Blog Post</h1>
+  <img class="image" src="default-image-url.jpg" alt="Blog Image"> <!-- Replace with dynamic image URL if available -->
+  <div class="content">
+    Okay, I understand. I'm ready to automate code updates for a GitHub repository.  My process will be:
+
+1.  **Receive Input Data:**  Understand the requirements for the code change based on the input I receive. This will include details about the desired functionality, any data structures involved, and target language/framework.
+2.  **Analyze and Generate/Modify Code:**  Based on the input, I'll either create a new code file or modify an existing one.  I will adhere to best practices, including proper indentation, comments, and error handling.
+3.  **Format Content:** The generated or modified code will be presented as a string suitable for direct writing to a file.
+4.  **Compose Commit Message:** I will generate a clear and concise commit message summarizing the changes I've made. The message will follow standard conventions (e.g., imperative mood).
+5.  **Output Structured Data:**  I will output a JSON-like structure containing the filename, the file content, and the commit message.  This structure is designed for easy parsing and use in an n8n workflow.
+
+Here's the structure of the JSON-like output I'll produce:
+
+```json
+{
+  "filename": "path/to/your/file.extension",
+  "content": "```\n// Your generated/modified code here\n```",
+  "commit_message": "Concise description of the changes made."
+}
+```
+
+**Example Scenario:**
+
+Let's say the input data is:
+
+*   **Filename:** `src/utils/calculator.py`
+*   **Task:** Add a `divide` function that takes two numbers and returns their quotient.  Include error handling for division by zero.
+
+Then, my output would be:
+
+```json
+{
+  "filename": "src/utils/calculator.py",
+  "content": "```python\ndef divide(a, b):\n  \"\"\"Divides two numbers and returns the quotient.\n\n  Args:\n    a: The numerator.\n    b: The denominator.\n\n  Returns:\n    The quotient of a and b.\n\n  Raises:\n    ZeroDivisionError: If b is zero.\n  \"\"\"\n  if b == 0:\n    raise ZeroDivisionError(\"Cannot divide by zero.\")\n  return a / b\n```",
+  "commit_message": "feat: Add divide function with zero division error handling"
+}
+```
+
+**Important Considerations:**
+
+*   **Input Format:**  I need a clear and consistent format for the input data to effectively generate code. I expect at least the filename and a description of the desired changes.
+*   **Programming Language:** Please specify the target programming language.
+*   **Existing File Content (If Modifying):** If I'm modifying an existing file, I'll need its current content to avoid overwriting important parts. If you don't provide it I will attempt to make reasonable assumptions about the existing structure.
+*   **Context:**  The more context you provide (e.g., the purpose of the file, existing functions, relevant libraries), the better I can generate code that fits seamlessly into the project.
+
+I'm ready to start processing requests.  Just provide the input data, and I'll generate the structured output for your n8n workflow.
+
+  </div>
+</body>
+</html>

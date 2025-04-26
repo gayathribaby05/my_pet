@@ -98,28 +98,45 @@
   <img class="image" src="https://media.licdn.com/dms/image/v2/D560BAQF45cp_RFZpnQ/company-logo_100_100/company-logo_100_100/0/1715885396777/iamx_retail_logo?e=1750896000&v=beta&t=MnLBchxb3zD52O7H0wDKTjX_PbDKBiMJvZkA5oTOL5M" alt="AI-powered marketing visualization with digital interfaces">
   
   <div class="content">
-    Okay, I understand. I am ready to act as an AI assistant for automating code updates in a GitHub repository.
+    Okay, I understand. I'm ready to process input data, generate/modify code, and provide the updated file content and a commit message in a format suitable for an n8n workflow to update a GitHub repository.
 
-Here's my process:
-
-1.  **Input Analysis:**  I will carefully analyze the input data provided. This includes understanding the desired changes, the target file, and any relevant context.
-2.  **Code Generation/Modification:** Based on the input, I will either generate new code or modify existing code in the target file.  I will prioritize clean, efficient, and well-commented code.
-3.  **Formatting & Validation:**  I will ensure the generated/modified code adheres to the appropriate language's style guidelines.  I'll also perform basic validation to catch common errors.
-4.  **Output Preparation:**  I will prepare the output in a structured format, containing:
-    *   **`content`**:  The complete, updated content of the target file.
-    *   **`commit_message`**:  A clear and concise commit message summarizing the changes made. This message should be informative and follow conventional commit guidelines (e.g., using prefixes like `feat:`, `fix:`, `chore:`, etc.).
-5.  **Ready for Automation:** The output will be structured in a way that it can be directly used as input for an automation workflow like n8n to update the GitHub repository.
-
-**Example Output Structure (JSON):**
+Here's the format I'll use for my output:
 
 ```json
 {
-  "content": "```python\n# Updated code here\ndef my_function(x):\n  \"\"\"This function does something.\"\"\"\n  return x * 2\n```",
-  "commit_message": "feat: Implement new feature to double input value"
+  "file_path": "path/to/the/file.ext",
+  "file_content": "```language\n// Updated code content\n// ...\n```",
+  "commit_message": "A concise and descriptive commit message."
 }
 ```
 
-I'm now ready to receive your input data and help automate your code updates! Please provide the necessary information, including the target file path, desired changes, and any relevant context.  The more context you give me, the better I can perform.
+**Explanation of fields:**
+
+*   **`file_path`**:  The relative path to the file within the GitHub repository that needs to be updated (e.g., `src/components/Button.js`).
+*   **`file_content`**: A string containing the complete, updated content of the file, including the language identifier for proper syntax highlighting. The language identifier should correspond to the file extension (e.g., `javascript`, `python`, `html`, `css`, `json`, `yaml`).
+*   **`commit_message`**: A short, informative description of the changes made to the file (e.g., "Fix: Corrected typo in button label", "Feat: Added new user authentication feature", "Refactor: Improved code readability").  The commit message should follow conventional commit guidelines where appropriate.
+
+**Example:**
+
+Let's say I'm given the task to update a button label in a React component. My output might look like this:
+
+```json
+{
+  "file_path": "src/components/Button.js",
+  "file_content": "```javascript\nimport React from 'react';\n\nfunction Button(props) {\n  return (\n    <button onClick={props.onClick}>\n      {props.label || 'Click Me'}\n    </button>\n  );\n}\n\nexport default Button;\n```",
+  "commit_message": "Fix: Update default button label to 'Click Me'"
+}
+```
+
+**How I will work:**
+
+1.  **Receive Input:** I'll be given data describing the desired changes. This could be in the form of instructions, code snippets, data structures, etc.
+2.  **Analyze Input:** I'll carefully analyze the input to understand the required modifications.
+3.  **Generate/Modify Code:** I'll either generate a new file or modify an existing one based on the input.
+4.  **Format Output:**  I'll format the updated file content and a clear commit message into the JSON structure described above.
+5.  **Provide Output:** I'll present the JSON output, ready to be used in an n8n workflow to update the GitHub repository.
+
+I'm ready for your instructions. Give me the data and the specifications, and I'll do my best to provide the correct code and commit message in the right format!
 
   </div>
 

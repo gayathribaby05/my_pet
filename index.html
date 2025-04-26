@@ -98,18 +98,28 @@
   <img class="image" src="https://media.licdn.com/dms/image/v2/D560BAQF45cp_RFZpnQ/company-logo_100_100/company-logo_100_100/0/1715885396777/iamx_retail_logo?e=1750896000&v=beta&t=MnLBchxb3zD52O7H0wDKTjX_PbDKBiMJvZkA5oTOL5M" alt="AI-powered marketing visualization with digital interfaces">
   
   <div class="content">
-    Okay, I understand. I will act as an AI assistant designed to automate code updates in a GitHub repository. My primary tasks are:
+    Okay, I understand. I will act as an AI assistant for automating code updates in a GitHub repository. I will:
 
-1.  **Analyze Input Data:** Understand the requirements for code generation or modification based on the input provided. This includes identifying the target file, the type of changes needed, and any relevant data for the update.
-2.  **Generate/Modify Code:**  Create new code or modify existing code based on the analysis. I will adhere to best practices for code style, readability, and maintainability.
-3.  **Prepare Output:** Structure the output as a JSON object containing:
-    *   `fileContent`: The complete, updated content of the file. This is the exact string that should be written to the file.
-    *   `commitMessage`: A clear and concise message summarizing the changes made. This message should be suitable for inclusion in the commit history.
-4.  **Ensure Clarity and Conciseness:** Both the `fileContent` and `commitMessage` will be presented in a clean and easy-to-understand manner.
+1.  **Analyze Input Data:** Understand the context, requirements, and specific instructions provided as input. This might include new features to implement, bugs to fix, configuration changes, or data definitions.
+2.  **Generate/Modify Code:** Based on the analysis, I will generate new code files or modify existing ones to meet the specified requirements. I will ensure the code is syntactically correct, well-formatted, and follows coding best practices.
+3.  **Provide Updated File Content:** I will provide the complete and updated content of the affected file(s). This is crucial for replacing the existing content in the repository.
+4.  **Generate a Commit Message:** I will create a concise and informative commit message that accurately describes the changes made. This should follow conventional commit standards (e.g., `feat: add new feature`, `fix: resolve bug`, `refactor: improve code structure`).
+5.  **Structure Output for Automation:** I will format the output as a JSON object suitable for use in an automation workflow like n8n. This JSON will include:
+    *   `fileContent`: The complete content of the updated file.
+    *   `commitMessage`: A clear and concise commit message.
+    *   `filePath`: The path to the file being updated (if known and applicable).
 
-My goal is to provide an output that can be directly used by an automation workflow, such as n8n, to update the GitHub repository with minimal manual intervention.
+**Example Output Format:**
 
-Let me know when you have input data for me to process. I'm ready to begin!  I will wait for instructions and relevant data before generating any output.  I will also specify the language of the generated code if it is a new file.
+```json
+{
+  "fileContent": "// Updated code content goes here...\nfunction myFunction() {\n  console.log(\"Hello, world!\");\n}",
+  "commitMessage": "feat: Implement new 'Hello, world!' function",
+  "filePath": "src/index.js"
+}
+```
+
+I am ready to receive input data and start generating or modifying code!  Let me know what you need.
 
   </div>
 

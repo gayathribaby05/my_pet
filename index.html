@@ -98,33 +98,33 @@
   <img class="image" src="https://media.licdn.com/dms/image/v2/D560BAQF45cp_RFZpnQ/company-logo_100_100/company-logo_100_100/0/1715885396777/iamx_retail_logo?e=1750896000&v=beta&t=MnLBchxb3zD52O7H0wDKTjX_PbDKBiMJvZkA5oTOL5M" alt="AI-powered marketing visualization with digital interfaces">
   
   <div class="content">
-    Okay, I understand. I will act as an AI assistant that automates code updates in a GitHub repository. My primary tasks will be:
+    Okay, I understand. I will act as an AI assistant that automates code updates for a GitHub repository. My primary tasks are:
 
-1.  **Analyze Input Data:** I will carefully examine any input data provided (e.g., a description of a new feature, changes to an existing function, or new data to be incorporated).
+1.  **Analyze Input Data:**  I'll carefully examine the input data provided, which may include specifications, requirements, or existing code snippets.
+2.  **Generate/Modify Code:**  Based on the input, I'll either generate new code files or modify existing ones to meet the specified requirements.
+3.  **Format and Clean Code:** Ensure the generated or modified code is clean, well-formatted, and follows best practices.
+4.  **Prepare Output for Automation:** Structure the output data in a format that is easily digestible by an automation workflow tool like n8n. This includes providing the file content and a well-crafted commit message.
+5.  **Commit Message Generation:** Create a clear and concise commit message describing the changes made to the codebase.
 
-2.  **Generate/Modify Code:** Based on the input data, I will either generate new code files or modify existing ones. I will adhere to best practices for code readability, maintainability, and style.
+**Output Structure:**
 
-3.  **Prepare Content:** I will ensure that the generated/modified code is clean, well-formatted, and ready to be committed. This may include:
+I will provide the output in a JSON format suitable for processing by an automation workflow.  The JSON structure will include the following fields:
 
-    *   Adding necessary comments.
-    *   Ensuring proper indentation and code style.
-    *   Removing unnecessary whitespace.
+*   `filePath`: (string) The path to the file being created or modified within the repository.
+*   `fileContent`: (string) The complete content of the file, ready to be written to the repository.
+*   `commitMessage`: (string) A short, descriptive commit message explaining the changes.
 
-4.  **Provide Output for n8n:** I will structure the output as a JSON object that can be directly consumed by an n8n workflow for committing the changes to a GitHub repository. The output will include:
-
-    *   **`fileContent`:** The complete content of the updated file.
-    *   **`commitMessage`:** A clear and concise message describing the changes made to the file.
-
-Here's the structure of the JSON output I will provide:
+**Example Output:**
 
 ```json
 {
-  "fileContent": "```\n// The updated content of the file\n// including comments and proper formatting\n```",
-  "commitMessage": "A concise and descriptive commit message explaining the changes made."
+  "filePath": "src/components/MyComponent.js",
+  "fileContent": "import React from 'react';\n\nfunction MyComponent() {\n  return (\n    <div>\n      <h1>Hello, World!</h1>\n    </div>\n  );\n}\n\nexport default MyComponent;",
+  "commitMessage": "feat: Add MyComponent with basic greeting"
 }
 ```
 
-I will ensure the output is ready to be used within an automated workflow to update a GitHub repository, focusing on providing clear and helpful information for the automated process. I am ready to receive input and begin generating or modifying code.
+I'm ready to take in input data and begin generating/modifying code. Please provide the input data you want me to work with. I'll do my best to provide accurate, well-formatted output that can be easily integrated into your automation workflow.
 
   </div>
 

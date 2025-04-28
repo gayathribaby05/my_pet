@@ -18,17 +18,19 @@
     }
     h1 { 
       color: #1a1a1a; 
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       font-size: 2.5em;
       line-height: 1.2;
-      text-align: center;
     }
-    .logo {
-      width: 100px;
-      height: 100px;
-      object-fit: contain;
-      display: block;
-      margin: 10px auto 20px auto;
+    h2 { 
+      color: #2a2a2a; 
+      margin-top: 2.5rem;
+      font-size: 1.75em;
+    }
+    h3 {
+      color: #3a3a3a;
+      margin-top: 1.5rem;
+      font-size: 1.25em;
     }
     .image { 
       width: 100%; 
@@ -45,6 +47,15 @@
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    .section { 
+      margin-bottom: 3rem;
+    }
+    .highlight {
+      background: #f3f4f6;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1rem 0;
     }
     .read-more {
       background: #3b82f6;
@@ -63,7 +74,7 @@
     .expandable-content {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+      transition: max-height 0.3s ease-out;
       opacity: 0;
     }
     .expandable-content.expanded {
@@ -71,27 +82,44 @@
       opacity: 1;
       transition: max-height 0.5s ease-in, opacity 0.3s ease-in;
     }
+    .tag {
+      display: inline-block;
+      background: #e5e7eb;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      margin-right: 0.5rem;
+      color: #4b5563;
+    }
   </style>
 </head>
 <body>
   <h1>Marketing AI Agents: The Future of Digital Marketing</h1>
-
-  <!-- IAMX Logo Image -->
-  <img class="logo" src="https://i.imgur.com/your-new-image.png" alt="IAMX Retail Logo">
-
-  <!-- Main Marketing Visualization Image -->
-  <img class="image" src="${$('Supabase').first().json.image_urls__001}" alt="AI-powered marketing visualization with digital interfaces">
+  <img class="image" src="undefined" alt="AI-powered marketing visualization with digital interfaces">
   
   <div class="content">
-    ${$input.first().json.output}
+    ## Tired of Your Retail Software? Migrating to iAmX is Easier Than You Think!
+
+Is your current retail software solution holding you back? Does it feel clunky, outdated, or simply not equipped to handle the demands of your growing business? If you're nodding along, you're not alone. Many retailers find themselves stuck with software that promises more than it delivers, leading to frustration and lost opportunities.
+
+The good news is, there's a better way. Migrating to iAmX can breathe new life into your retail operations, streamlining processes, improving efficiency, and ultimately boosting your bottom line. And the best part? We've made the transition process incredibly smooth and hassle-free.
+
+We understand that switching software can seem daunting. The thought of transferring data, retraining staff, and potentially disrupting operations can be enough to make anyone hesitate. That's why we're committed to providing comprehensive support every step of the way.
+
+From initial planning to final implementation, our team of experts will guide you through the entire migration process. We'll work closely with you to understand your specific needs and challenges, ensuring a seamless transition with minimal disruption to your daily operations.
+
+And if you require a more tailored approach, we've got you covered. We can build a custom transition plan specifically designed for your organization. This personalized strategy will take into account your unique infrastructure, data requirements, and business goals, ensuring a migration that's perfectly aligned with your needs.
+
+With iAmX, you can finally say goodbye to the limitations of your old retail software and embrace a future of streamlined efficiency and increased profitability. Contact us today to learn more about how easy it is to make the switch!
+
   </div>
 
   <script>
     function toggleContent(section) {
-      const content = document.getElementById(section + '-content');
+      const content = document.getElementById(`${section}-content`);
       const button = content.previousElementSibling;
       const isExpanded = content.classList.contains('expanded');
-
+      
       content.classList.toggle('expanded');
       button.textContent = isExpanded ? 'Read More' : 'Show Less';
     }

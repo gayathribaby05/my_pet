@@ -40,6 +40,13 @@
       border-radius: 12px;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     }
+    .logo {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 20px auto;
+    }
     .content { 
       font-size: 1.1em; 
       color: #444;
@@ -95,26 +102,19 @@
 </head>
 <body>
   <h1>Marketing AI Agents: The Future of Digital Marketing</h1>
-  <img class="image" src="undefined" alt="AI-powered marketing visualization with digital interfaces">
+
+  <!-- Added logo image -->
+  <img class="logo" src="https://media.licdn.com/dms/image/v2/D560BAQF45cp_RFZpnQ/company-logo_100_100/company-logo_100_100/0/1715885396777/iamx_retail_logo?e=1750896000&v=beta&t=MnLBchxb3zD52O7H0wDKTjX_PbDKBiMJvZkA5oTOL5M" alt="IAMX Retail Logo">
+
+  <img class="image" src="${$('Supabase').first().json.image_urls__001}" alt="AI-powered marketing visualization with digital interfaces">
   
   <div class="content">
-    ## Outgrowing Your Retail Software? Migrating to iAmX is Easier Than You Think.
-
-Is your current retail software solution holding you back? Maybe it's clunky, outdated, or simply doesn't offer the features you need to thrive in today's competitive market. If you're feeling frustrated and your software feels more like a hindrance than a help, it might be time for a change.
-
-The good news is that migrating to a more robust and user-friendly platform like iAmX doesn't have to be a daunting task. We understand that switching software can seem overwhelming, filled with potential disruptions and data loss concerns. That's why we've made the transition to iAmX as seamless and straightforward as possible.
-
-We're with you every step of the way, providing expert guidance and support to ensure a smooth and efficient migration. From initial data assessment and planning to implementation and training, our dedicated team is committed to making the process hassle-free.
-
-And if your organization has unique needs and complexities, don't worry. We go beyond the standard approach and offer custom transition plans tailored specifically to your business. We'll work closely with you to understand your specific requirements and build a migration strategy that minimizes disruption and maximizes efficiency.
-
-With iAmX, you can finally unlock the full potential of your retail operations without the headache of a complicated software transition. Experience the power of a modern, intuitive, and scalable platform designed to drive growth and streamline your business. Contact us today to learn more about how easy it is to migrate to iAmX and take your retail business to the next level.
-
+    ${$input.first().json.output}
   </div>
 
   <script>
     function toggleContent(section) {
-      const content = document.getElementById(`${section}-content`);
+      const content = document.getElementById('${$input.first().json.output}-content');
       const button = content.previousElementSibling;
       const isExpanded = content.classList.contains('expanded');
       

@@ -18,17 +18,19 @@
     }
     h1 { 
       color: #1a1a1a; 
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       font-size: 2.5em;
       line-height: 1.2;
-      text-align: center;
     }
-    .logo {
-      width: 100px;
-      height: 100px;
-      object-fit: contain;
-      display: block;
-      margin: 10px auto 20px auto;
+    h2 { 
+      color: #2a2a2a; 
+      margin-top: 2.5rem;
+      font-size: 1.75em;
+    }
+    h3 {
+      color: #3a3a3a;
+      margin-top: 1.5rem;
+      font-size: 1.25em;
     }
     .image { 
       width: 100%; 
@@ -45,6 +47,15 @@
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    .section { 
+      margin-bottom: 3rem;
+    }
+    .highlight {
+      background: #f3f4f6;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1rem 0;
     }
     .read-more {
       background: #3b82f6;
@@ -63,7 +74,7 @@
     .expandable-content {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+      transition: max-height 0.3s ease-out;
       opacity: 0;
     }
     .expandable-content.expanded {
@@ -71,27 +82,48 @@
       opacity: 1;
       transition: max-height 0.5s ease-in, opacity 0.3s ease-in;
     }
+    .tag {
+      display: inline-block;
+      background: #e5e7eb;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      margin-right: 0.5rem;
+      color: #4b5563;
+    }
   </style>
 </head>
 <body>
   <h1>Marketing AI Agents: The Future of Digital Marketing</h1>
-
-  <!-- IAMX Logo Image -->
-  <img class="logo" src="https://media.licdn.com/dms/image/v2/D560BAQF45cp_RFZpnQ/company-logo_100_100/company-logo_100_100/0/1715885396777/iamx_retail_logo?e=1750896000&v=beta&t=MnLBchxb3zD52O7H0wDKTjX_PbDKBiMJvZkA5oTOL5M" alt="IAMX Retail Logo">
-
-  <!-- Main Marketing Visualization Image -->
-  <img class="image" src="${$('Supabase').first().json.image_urls__001}" alt="AI-powered marketing visualization with digital interfaces">
+  <img class="image" src="undefined" alt="AI-powered marketing visualization with digital interfaces">
   
   <div class="content">
-    ${$input.first().json.output}
+    ## Tired of Your Current Retail Software? Migrating to iAmX is Easier Than You Think!
+
+Is your current retail software solution holding you back? Are you struggling with outdated features, clunky interfaces, or a lack of scalability? If so, you're likely missing out on opportunities to streamline operations, enhance customer experiences, and ultimately, boost your bottom line.
+
+The good news is, transitioning to a more robust and modern solution doesn't have to be a daunting task. Migrating to iAmX is designed to be seamless and straightforward, allowing you to quickly unlock the power of our comprehensive retail management platform.
+
+We understand that switching software can seem overwhelming. That's why we're committed to providing unparalleled support throughout the entire migration process. From initial planning to final implementation, our team of experts will be with you every step of the way. We'll guide you through data transfer, system configuration, and employee training, ensuring a smooth transition with minimal disruption to your business.
+
+**Need a Custom Transition Plan? We've Got You Covered.**
+
+We recognize that every retail business is unique, with its own specific needs and challenges. That's why we don't offer a one-size-fits-all approach to migration. If your organization requires a more tailored solution, we'll work closely with you to develop a custom transition plan that addresses your specific requirements. This includes:
+
+*   **In-depth analysis of your current system:** We'll thoroughly assess your existing software, data structures, and workflows to identify potential challenges and opportunities.
+*   **Personalized migration strategy:** Based on our analysis, we'll create a detailed migration strategy that outlines the steps involved, timelines, and resources required for a successful transition.
+*   **Dedicated support team:** You'll have a dedicated support team assigned to your account, providing ongoing assistance and guidance throughout the entire process.
+
+With iAmX, you can say goodbye to the frustrations of your current retail software and hello to a more efficient, profitable, and customer-centric future. Contact us today to learn more about how we can help you make the switch!
+
   </div>
 
   <script>
     function toggleContent(section) {
-      const content = document.getElementById(section + '-content');
+      const content = document.getElementById(`${section}-content`);
       const button = content.previousElementSibling;
       const isExpanded = content.classList.contains('expanded');
-
+      
       content.classList.toggle('expanded');
       button.textContent = isExpanded ? 'Read More' : 'Show Less';
     }

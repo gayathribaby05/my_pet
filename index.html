@@ -18,17 +18,19 @@
     }
     h1 { 
       color: #1a1a1a; 
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       font-size: 2.5em;
       line-height: 1.2;
-      text-align: center;
     }
-    .logo {
-      width: 100px;
-      height: 100px;
-      object-fit: contain;
-      display: block;
-      margin: 10px auto 20px auto;
+    h2 { 
+      color: #2a2a2a; 
+      margin-top: 2.5rem;
+      font-size: 1.75em;
+    }
+    h3 {
+      color: #3a3a3a;
+      margin-top: 1.5rem;
+      font-size: 1.25em;
     }
     .image { 
       width: 100%; 
@@ -45,6 +47,15 @@
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    .section { 
+      margin-bottom: 3rem;
+    }
+    .highlight {
+      background: #f3f4f6;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1rem 0;
     }
     .read-more {
       background: #3b82f6;
@@ -63,7 +74,7 @@
     .expandable-content {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+      transition: max-height 0.3s ease-out;
       opacity: 0;
     }
     .expandable-content.expanded {
@@ -71,27 +82,42 @@
       opacity: 1;
       transition: max-height 0.5s ease-in, opacity 0.3s ease-in;
     }
+    .tag {
+      display: inline-block;
+      background: #e5e7eb;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      margin-right: 0.5rem;
+      color: #4b5563;
+    }
   </style>
 </head>
 <body>
   <h1>Marketing AI Agents: The Future of Digital Marketing</h1>
-
-  <!-- IAMX Logo Image -->
-  <img class="logo" src="$('Supabase').first().json.image_urls__001" alt="IAMX Retail Logo">
-
-  <!-- Main Marketing Visualization Image -->
-  <img class="image" src="${$('Supabase').first().json.image_urls__001}" alt="AI-powered marketing visualization with digital interfaces">
+  <img class="image" src="undefined" alt="AI-powered marketing visualization with digital interfaces">
   
   <div class="content">
-    ${$input.first().json.output}
+    ## Time to upgrade your retail software? We've got you covered.
+
+Is your current retail software holding you back? Maybe it's clunky, outdated, or just doesn't quite fit your business needs anymore. Whatever the reason, you're likely missing out on opportunities to streamline operations, improve customer experiences, and ultimately, boost your bottom line.
+
+The good news is that migrating to a more powerful and efficient solution like iAmX doesn't have to be a headache. In fact, we've made the transition process as smooth and straightforward as possible.
+
+We understand that switching software can feel daunting. Data migration, employee training, and potential disruptions can all seem overwhelming. That's why we offer comprehensive support to guide you every step of the way. Our dedicated team will work closely with you to ensure a seamless transition, minimizing downtime and maximizing the benefits of your new iAmX system.
+
+And if your organization has unique needs or a complex setup, don't worry! We're experts at crafting custom transition plans. We'll analyze your existing infrastructure, understand your specific requirements, and develop a tailored strategy that ensures a successful migration with minimal disruption.
+
+With iAmX, you're not just getting a superior retail software solution; you're gaining a partner committed to your success. So, ditch the outdated system and embrace a future of efficiency, growth, and enhanced customer satisfaction. Let us handle the migration – you focus on running your business.
+
   </div>
 
   <script>
     function toggleContent(section) {
-      const content = document.getElementById(section + '-content');
+      const content = document.getElementById(`${section}-content`);
       const button = content.previousElementSibling;
       const isExpanded = content.classList.contains('expanded');
-
+      
       content.classList.toggle('expanded');
       button.textContent = isExpanded ? 'Read More' : 'Show Less';
     }

@@ -7,17 +7,131 @@
   <title>Marketing AI Agent Guide</title>
   <meta name="description" content="A comprehensive guide to Marketing AI Agents: Revolutionizing Digital Marketing">
   <style>
-    body { font-family: 'Inter', sans-serif; padding: 20px; max-width: 800px; margin: 0 auto; background: #f9fafb; }
-    h1 { color: #1a1a1a; font-size: 2.5em; }
-    img { width: 100%; border-radius: 12px; margin: 20px 0; }
-    .content { background: #fff; padding: 2rem; border-radius: 12px; }
+    body { 
+      font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+      line-height: 1.6; 
+      padding: 20px; 
+      max-width: 800px; 
+      margin: 0 auto;
+      color: #333;
+      background-color: #f9fafb;
+    }
+    h1 { 
+      color: #1a1a1a; 
+      margin-bottom: 1.5rem;
+      font-size: 2.5em;
+      line-height: 1.2;
+    }
+    h2 { 
+      color: #2a2a2a; 
+      margin-top: 2.5rem;
+      font-size: 1.75em;
+    }
+    h3 {
+      color: #3a3a3a;
+      margin-top: 1.5rem;
+      font-size: 1.25em;
+    }
+    .image { 
+      width: 100%; 
+      max-width: 800px; 
+      height: auto; 
+      margin: 24px 0; 
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    .content { 
+      font-size: 1.1em; 
+      color: #444;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    .section { 
+      margin-bottom: 3rem;
+    }
+    .highlight {
+      background: #f3f4f6;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+    .read-more {
+      background: #3b82f6;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .read-more:hover {
+      background: #2563eb;
+      transform: translateY(-1px);
+    }
+    .expandable-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      opacity: 0;
+    }
+    .expandable-content.expanded {
+      max-height: 1000px;
+      opacity: 1;
+      transition: max-height 0.5s ease-in, opacity 0.3s ease-in;
+    }
+    .tag {
+      display: inline-block;
+      background: #e5e7eb;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      margin-right: 0.5rem;
+      color: #4b5563;
+    }
   </style>
 </head>
 <body>
   <h1>Marketing AI Agents: The Future of Digital Marketing</h1>
-  <img src="$('Airtable').first().json.image_urls__001" alt="AI-powered marketing visualization">
+  <img class="image" src="https://media.licdn.com/dms/image/v2/D560BAQF45cp_RFZpnQ/company-logo_100_100/company-logo_100_100/0/1715885396777/iamx_retail_logo?e=1750896000&v=beta&t=MnLBchxb3zD52O7H0wDKTjX_PbDKBiMJvZkA5oTOL5M" alt="AI-powered marketing visualization with digital interfaces">
+  
   <div class="content">
-     $input.first().json.output
+    # Supercharge Your Retail Journey with iAmX
+
+In today's fast-paced retail environment, businesses are constantly seeking innovative ways to enhance their operations and maximize their profits. Whether you run a small boutique or manage a large retail chain, having the right tools at your disposal can make all the difference. iAmX is here to empower you on your retail journey, providing a comprehensive suite of solutions designed to help you make informed decisions, streamline operations, and ultimately, improve your bottom line.
+
+## Unlock Smart Decision-Making
+
+One of the biggest challenges retailers face is navigating the overwhelming amount of data available to them. iAmX recognizes the importance of data-driven decision-making in today's market. With intuitive analytics tools, you can easily access key performance metrics and consumer insights that help you understand what works and what doesn’t. By leveraging these insights, you can make strategic choices that align closely with your business goals, ensuring you're always one step ahead of the competition.
+
+## Streamline Operations Effortlessly
+
+Operational efficiency is crucial for any retailer looking to thrive. iAmX equips you with features that help streamline your daily operations. From inventory management to point-of-sale systems, everything is designed to save you time and minimize errors. Imagine having a centralized platform where you can monitor stock levels, track sales, and manage employee performance all in one place. This level of integration allows you to devote more time to growing your business rather than getting bogged down by logistics.
+
+## Boost Your Bottom Line
+
+At the end of the day, the ultimate goal of any retail operation is to boost profitability. With iAmX, you can unlock strategies to enhance profitability through increased sales and reduced operational costs. The platform helps you identify trends in customer behavior, enabling you to tailor promotions and inventory selections that resonate with your target audience. Furthermore, the insights provided can guide you in optimizing your pricing strategies, ensuring you strike the perfect balance between competitiveness and profitability.
+
+## Experience the Magic for Yourself
+
+The best way to understand the impact of iAmX on your retail operations is to see it in action. The platform offers a demo, providing you with a firsthand look at the powerful tools available to you. This opportunity allows you to explore the features, ask questions, and understand how iAmX can specifically benefit your business. 
+
+Don’t let the complexities of retail hold you back. Take the next step towards transforming your business. Sign up for a demo with iAmX today and experience the magic your retail journey deserves. 
+
+By investing in the right technology, you position yourself for success, ready to adapt and thrive in a rapidly changing marketplace. Embrace the future of retail with confidence — the possibilities are endless with iAmX by your side.
   </div>
+
+  <script>
+    function toggleContent(section) {
+      const content = document.getElementById(`${section}-content`);
+      const button = content.previousElementSibling;
+      const isExpanded = content.classList.contains('expanded');
+      
+      content.classList.toggle('expanded');
+      button.textContent = isExpanded ? 'Read More' : 'Show Less';
+    }
+  </script>
 </body>
 </html>

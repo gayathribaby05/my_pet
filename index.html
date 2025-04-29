@@ -7,17 +7,129 @@
   <title>Marketing AI Agent Guide</title>
   <meta name="description" content="A comprehensive guide to Marketing AI Agents: Revolutionizing Digital Marketing">
   <style>
-    body { font-family: 'Inter', sans-serif; padding: 20px; max-width: 800px; margin: 0 auto; background: #f9fafb; }
-    h1 { color: #1a1a1a; font-size: 2.5em; }
-    img { width: 100%; border-radius: 12px; margin: 20px 0; }
-    .content { background: #fff; padding: 2rem; border-radius: 12px; }
+    body { 
+      font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+      line-height: 1.6; 
+      padding: 20px; 
+      max-width: 800px; 
+      margin: 0 auto;
+      color: #333;
+      background-color: #f9fafb;
+    }
+    h1 { 
+      color: #1a1a1a; 
+      margin-bottom: 1.5rem;
+      font-size: 2.5em;
+      line-height: 1.2;
+    }
+    h2 { 
+      color: #2a2a2a; 
+      margin-top: 2.5rem;
+      font-size: 1.75em;
+    }
+    h3 {
+      color: #3a3a3a;
+      margin-top: 1.5rem;
+      font-size: 1.25em;
+    }
+    .image { 
+      width: 100%; 
+      max-width: 800px; 
+      height: auto; 
+      margin: 24px 0; 
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    .content { 
+      font-size: 1.1em; 
+      color: #444;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    .section { 
+      margin-bottom: 3rem;
+    }
+    .highlight {
+      background: #f3f4f6;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+    .read-more {
+      background: #3b82f6;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .read-more:hover {
+      background: #2563eb;
+      transform: translateY(-1px);
+    }
+    .expandable-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      opacity: 0;
+    }
+    .expandable-content.expanded {
+      max-height: 1000px;
+      opacity: 1;
+      transition: max-height 0.5s ease-in, opacity 0.3s ease-in;
+    }
+    .tag {
+      display: inline-block;
+      background: #e5e7eb;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      margin-right: 0.5rem;
+      color: #4b5563;
+    }
   </style>
 </head>
 <body>
   <h1>Marketing AI Agents: The Future of Digital Marketing</h1>
-  <img src="$('Airtable').first().json.image_urls__001" alt="AI-powered marketing visualization">
+  <img class="image" src="https://media.licdn.com/dms/image/v2/D560BAQF45cp_RFZpnQ/company-logo_100_100/company-logo_100_100/0/1715885396777/iamx_retail_logo?e=1750896000&v=beta&t=MnLBchxb3zD52O7H0wDKTjX_PbDKBiMJvZkA5oTOL5M" alt="AI-powered marketing visualization with digital interfaces">
+  
   <div class="content">
-    "$input.first().json.output"
+    # Supercharge Your Retail Journey with iAmX
+
+In the ever-evolving landscape of retail, businesses need to adapt and innovate to stay ahead of the competition. Whether you’re a small boutique or a large enterprise, having the right tools at your disposal can make all the difference. Enter iAmX, a game-changing solution designed to elevate your retail experience. 
+
+## Empower Your Decision-Making
+
+Every successful retail business relies on informed decision-making. iAmX provides powerful analytics and insights that allow you to understand consumer behavior, inventory trends, and market dynamics. With this data at your fingertips, you can make choices that not only enhance customer satisfaction but also drive profitability. Imagine tailoring your offerings based on what your customers truly desire, thus maximizing sales and retention.
+
+## Streamline Operations
+
+Efficiency is at the heart of a successful retail operation. iAmX is equipped with a suite of tools intended to simplify and enhance your daily processes. From supply chain management to employee scheduling, each feature is designed with usability in mind. By automating time-consuming tasks, you'll free up valuable resources that you can redirect towards strategic initiatives that foster growth.
+
+## Boost Your Bottom Line
+
+Ultimately, every improvement you make in your retail operations should lead to a healthier bottom line. iAmX is not just about incremental enhancements; it’s about delivering significant value. By harnessing cutting-edge technology, you can identify cost-saving opportunities, minimize waste, and optimize pricing strategies. The result? Increased margins and a solid pathway to profitability.
+
+## Experience the Magic Yourself
+
+Curious to see how iAmX can transform your retail journey? We invite you to sign up for a demo. Experiencing the platform firsthand will allow you to appreciate its full potential. Whether you’re looking to boost sales, improve operational efficiency, or make smarter, data-driven decisions, iAmX has the tools you need to succeed.
+
+Don’t wait to elevate your retail experience. Take the first step towards transforming your business with iAmX today!
   </div>
+
+  <script>
+    function toggleContent(section) {
+      const content = document.getElementById(`${section}-content`);
+      const button = content.previousElementSibling;
+      const isExpanded = content.classList.contains('expanded');
+      
+      content.classList.toggle('expanded');
+      button.textContent = isExpanded ? 'Read More' : 'Show Less';
+    }
+  </script>
 </body>
 </html>

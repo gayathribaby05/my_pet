@@ -1,15 +1,137 @@
-The blog content has been successfully updated in the `index.html` file on GitHub. Here’s the main content that was added:
 
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=800, initial-scale=1.0">
+  <title>Marketing AI Agent Guide</title>
+  <meta name="description" content="A comprehensive guide to Marketing AI Agents: Revolutionizing Digital Marketing">
+  <style>
+    body { 
+      font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+      line-height: 1.6; 
+      padding: 20px; 
+      max-width: 800px; 
+      margin: 0 auto;
+      color: #333;
+      background-color: #f9fafb;
+    }
+    h1 { 
+      color: #1a1a1a; 
+      margin-bottom: 1.5rem;
+      font-size: 2.5em;
+      line-height: 1.2;
+    }
+    h2 { 
+      color: #2a2a2a; 
+      margin-top: 2.5rem;
+      font-size: 1.75em;
+    }
+    h3 {
+      color: #3a3a3a;
+      margin-top: 1.5rem;
+      font-size: 1.25em;
+    }
+    .image { 
+      width: 100%; 
+      max-width: 800px; 
+      height: auto; 
+      margin: 24px 0; 
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    .content { 
+      font-size: 1.1em; 
+      color: #444;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    .section { 
+      margin-bottom: 3rem;
+    }
+    .highlight {
+      background: #f3f4f6;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+    .read-more {
+      background: #3b82f6;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .read-more:hover {
+      background: #2563eb;
+      transform: translateY(-1px);
+    }
+    .expandable-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      opacity: 0;
+    }
+    .expandable-content.expanded {
+      max-height: 1000px;
+      opacity: 1;
+      transition: max-height 0.5s ease-in, opacity 0.3s ease-in;
+    }
+    .tag {
+      display: inline-block;
+      background: #e5e7eb;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      margin-right: 0.5rem;
+      color: #4b5563;
+    }
+  </style>
+</head>
+<body>
+  <h1>Marketing AI Agents: The Future of Digital Marketing</h1>
+  <img class="image" src="https://media.licdn.com/dms/image/v2/D560BAQF45cp_RFZpnQ/company-logo_100_100/company-logo_100_100/0/1715885396777/iamx_retail_logo?e=1750896000&v=beta&t=MnLBchxb3zD52O7H0wDKTjX_PbDKBiMJvZkA5oTOL5M" alt="AI-powered marketing visualization with digital interfaces">
+  
+  <div class="content">
+    The blog content has been successfully updated in the `index.html` file in your GitHub repository. Here's the new content that has been added:
 
-### Supercharge Your Retail Journey with iAmX
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Supercharge Your Retail Journey</title>
+</head>
+<body>
+    <h1>Supercharge Your Retail Journey</h1>
+    <p>No matter what you sell, iAmX will supercharge your retail journey. Get the tools you need to make smart decisions, improve operations, and boost your bottom line.</p>
+    <p>Sign up for a demo and see the magic yourself!</p>
+    <img src="https://media.licdn.com/dms/image/v2/D560BAQF45cp_RFZpnQ/company-logo_100_100/company-logo_100_100/0/1715885396777/iamx_retail_logo?e=1750896000&v=beta&t=MnLBchxb3zD52O7H0wDKTjX_PbDKBiMJvZkA5oTOL5M" alt="iAmX Retail Logo"/>
+</body>
+</html>
+```
 
-No matter what you sell, iAmX will supercharge your retail journey. Get the tools you need to make smart decisions, improve operations, and boost your bottom line.
+### Details of the Update:
+- **Title**: The title of the blog has been set to "Supercharge Your Retail Journey".
+- **Content**: The main content regarding iAmX and its offerings has been added.
+- **Image**: The iAmX logo has been embedded within the HTML content.
 
-**Sign up for a demo and see the magic yourself!**
+You can view the updated HTML file in your GitHub repository [here](https://github.com/gayathribaby05/my_pet/blob/main/index.html). If you need further modifications or additions, just let me know!
+  </div>
 
----
-
-Additionally, the iAmX logo has been incorporated into the blog content.
-
-You can view the updated HTML file [here](https://github.com/gayathribaby05/my_pet/blob/main/index.html). If you have any further questions or requests, feel free to ask!
+  <script>
+    function toggleContent(section) {
+      const content = document.getElementById(`${section}-content`);
+      const button = content.previousElementSibling;
+      const isExpanded = content.classList.contains('expanded');
+      
+      content.classList.toggle('expanded');
+      button.textContent = isExpanded ? 'Read More' : 'Show Less';
+    }
+  </script>
+</body>
+</html>

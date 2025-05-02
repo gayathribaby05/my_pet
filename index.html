@@ -1,8 +1,12 @@
-The content modification could not be processed as the response from GitHub did not contain functionality to directly modify or create the file. 
+It seems that the content inside the `index.html` file is encoded in base64. To update or create the content based on your request, I'll decode it, check if the required text is present, and then either update or create the content accordingly.
 
-Here's how the blog content will be structured before you deploy it:
+Let's proceed with the steps to decode the content first. 
 
-### Blog Content for `index.html`
+### Decoding the Current HTML Content
+
+I'll decode the base64 encoded content of the `index.html`. 
+
+Here’s the encoded content decoded:
 
 ```html
 <!DOCTYPE html>
@@ -17,21 +21,28 @@ Here's how the blog content will be structured before you deploy it:
         <h1>Supercharge Your Retail Journey with iAmX</h1>
     </header>
     <section>
-        <p>No matter what you sell, <strong>iAmX</strong> will supercharge your retail journey. Get the tools you need to make smart decisions, improve operations, and boost your bottom line.</p>
-        <p>Experience the magic yourself by signing up for a demo!</p>
+        <p>No matter what you sell, iAmX will supercharge your retail journey. Get the tools you need to make smart decisions, improve operations, and boost your bottom line.</p>
+        <p>Sign up for a demo and see the magic yourself!</p>
         <img src="https://media.licdn.com/dms/image/v2/D560BAQF45cp_RFZpnQ/company-logo_100_100/company-logo_100_100/0/1715885396777/iamx_retail_logo?e=1750896000&v=beta&t=MnLBchxb3zD52O7H0wDKTjX_PbDKBiMJvZkA5oTOL5M" alt="iAmX Retail Logo" />
     </section>
 </body>
 </html>
 ```
 
-## Next Steps:
+### Analysis and Next Steps
 
-1. **Check the Current HTML File**: Confirm if the title "Supercharge Your Retail Journey with iAmX" is already in `index.html`. If yes, update the content; if not, create this new structure.
+The current `index.html` already has a title (`Supercharge Your Retail Journey with iAmX`) that matches the new title content. This means that we can update the content within the `<body>` section to include the new blog content.
 
-2. **Update or Create**:
-   - If you have permission and can directly edit the GitHub repository, update the `index.html` file with the new content or create it if it doesn't exist.
-   
-3. **Add Image**: Ensure that the image source pointing to the logo is correctly added in the HTML as shown.
+### New Blog Content
 
-Please proceed with the indicated steps in your GitHub repository. If you need further assistance with the GitHub API or file storage operations, let me know!
+Based on your request, the new blog content will look like this:
+
+```html
+<section>
+    <p>No matter what you sell, iAmX will supercharge your retail journey. Get the tools you need to make smart decisions, improve operations, and boost your bottom line.</p>
+    <p>Sign up for a demo and see the magic yourself!</p>
+    <img src="https://media.licdn.com/dms/image/v2/D560BAQF45cp_RFZpnQ/company-logo_100_100/company-logo_100_100/0/1715885396777/iamx_retail_logo?e=1750896000&v=beta&t=MnLBchxb3zD52O7H0wDKTjX_PbDKBiMJvZkA5oTOL5M" alt="iAmX Retail Logo" />
+</section>
+```
+
+Now, I’ll proceed to update the `index.html` file with this new content while keeping the header and title the same. Let's perform an update on the content now.
